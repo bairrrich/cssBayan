@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-size: 1rem;
+  background-color: rgb(163, 187, 125);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.header {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.logo {
+  display: flex;
+  justify-content: left;
+  margin: 1rem 3rem;
+  font-size: 3rem;
+  font-weight: bolder;
+  ;
+}
+
+.main {
+  max-width: 1280px;
+  margin: 1rem auto;
+  padding: 1rem auto;
+  cursor: pointer;
+  color: blue;
+}
+
+.main:hover {
+  color: black;
+}
+
+.main:hover .cross {
+  visibility: visible;
+}
+
+
+.wrapper-item:hover.cross {
+  visibility: visible;
+}
+
+.line {
+  width: auto;
+  margin: auto 1rem;
+  height: 2px;
+  background-color: black;
+}
+
+.item-input {
+  width: 0;
+  height: 0;
+  position: absolute;
+  appearance: none;
+}
+
+.label-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 1rem;
+}
+
+.label-input:hover .cross {
+  transform: rotate(-315deg);
+  transition: all 0.5s ease-in;
+}
+
+.item-input:checked+.label-input .item-label~.cross {
+  transform: rotate(315deg);
+}
+
+.item-input:checked+.label-input .item-label {
+  color: black;
+}
+
+.item-input:hover~.img {
+  display: block;
+  height: 20rem;
+  width: 20rem;
+  opacity: 1;
+  transform: scale(1);
+  transition: all 1s ease-out;
+}
+
+.item-input:checked~.img {
+  display: block;
+  height: 20rem;
+  width: 20rem;
+  opacity: 1;
+  transform: rotate(5deg);
+  transition: all 1s ease-in;
+}
+
+
+.item-label {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.cross {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+  visibility: hidden;
+}
+
+.cross:hover {
+  transform: rotate(-45deg);
+  transition: all 1s ease-in;
+}
+
+.img {
+  display: block;
+  margin: 2rem auto;
+  height: 0rem;
+  width: 0rem;
+  border-radius: 2rem;
+  align-content: center;
+  object-fit: cover;
+  display: none;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 1 ease-in;
+}
+
+@media (max-width: 1920px) {
+  .logo {
+    color: green;
+  }
+}
+
+@media (max-width: 820px) {
+  .logo {
+    color: purple;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo {
+    color: yellow;
+  }
+}
