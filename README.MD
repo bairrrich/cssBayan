@@ -2,3 +2,6 @@
 
 ## Проблема
 Печаль-беда не создалась ветка maim. Делал через командную строку в VSCode команду: git checkout -b gh-pages. Возможно в этом ошибка. Еще забываю пулить с гита.
+
+
+https://bairrrich.github.io/cssBayan/cssBayan/
